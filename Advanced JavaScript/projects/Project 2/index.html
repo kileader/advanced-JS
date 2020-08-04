@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project 2 - JS APIs and Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="api.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Get Weather by Zipcode</h1>
+    </header>
+
+    <main>
+
+      <label for="zipcode">
+      <input id="zipcode" type="text" placeholder="zipcode" /></label>
+      <button type="button" id="getweather" value="getweather">Get Weather!</button>
+
+      <hr />
+
+      <div id="resultsSection">
+
+        <p id="placeResult"></p>
+
+        <div id="temperature">
+          <p id="temperatureResult"></p>
+          <img id="coldResult" class="hidden" src="images/cold.png"
+              alt="drawing of a snowflake and a thermostat with a low reading"/>
+          <img id="hotResult" class="hidden" src="images/hot.png"
+              alt="drawing of the sun and a thermostat with a high reading"/>
+        </div>
+
+        <div id="wind">
+          <p id="windResult"></p>
+          <img id="highWindResult" class="hidden" src="images/wind.png"
+              alt="drawing of a gust of wind"/>
+        </div>
+
+      </div>
+
+    </main>
+
+  </body>
+
+</html>

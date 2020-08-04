@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Project 1 - JS Fundamentals</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="fundamentals.js" charset="utf-8"></script>
+   </head>
+   <body>
+      <h1>House Cost Estimation</h1>
+      <h2>Choose your options</h2>
+      <section>
+         <h3>Single Story vs. Two Story</h3>
+         <img id="singleStory" src="images/singleStory.png" onclick="chooseStory('singleStory');" alt="single story house"/>
+         <img id="twoStory" src="images/twoStory.png" onclick="chooseStory('twoStory');" alt="two story house"/>
+      </section>
+      <section>
+         <h3>Color</h3>
+         <img id="blue" src="images/blue.png" onclick="chooseColor('blue');" alt="blue"/>
+         <img id="gray" src="images/gray.png" onclick="chooseColor('gray');" alt="gray"/>
+         <img id="green" src="images/green.png" onclick="chooseColor('green');" alt="green"/>
+         <img id="red" src="images/red.png" onclick="chooseColor('red');" alt="red"/>
+         <img id="yellow" src="images/yellow.png" onclick="chooseColor('yellow')" alt="yellow"/>
+         <img id="cyan" src="images/cyan.png" onclick="chooseColor('cyan')" alt="cyan"/>
+         <img id="white" src="images/white.png" onclick="chooseColor('white')" alt="white"/>
+         <img id="black" src="images/black.png" onclick="chooseColor('black')" alt="black"/>
+      </section>
+      <section>
+         <h3>Exterior Material</h3>
+         <img id="vinyl" src="images/vinyl.png" onclick="chooseMaterial('vinyl');" alt="vinyl"/>
+         <img id="wood" src="images/wood.png" onclick="chooseMaterial('wood');" alt="wood"/>
+         <img id="stucco" src="images/stucco.png" onclick="chooseMaterial('stucco');" alt="stucco"/>
+         <img id="brick" src="images/brick.png" onclick="chooseMaterial('brick');" alt="brick"/>
+         <img id="stone" src="images/stone.png" onclick="chooseMaterial('stone');" alt="stone"/>
+      </section>
+      <section>
+         <h3>Square Footage</h3>
+         <input id="area" onblur="logArea();" type="text" placeholder="sq.footage"/>
+      </section>
+      <section>
+         <h3>Garage (# of vehicles)</h3>
+         <input type="radio" id="oneCar" onclick="console.log('oneCar');" name="numCars" value="1">
+         <label for="oneCar">1&nbsp;</label>
+         <input type="radio" id="twoCars" onclick="console.log('twoCars');" name="numCars" value="2">
+         <label for="twoCars">2&nbsp;</label>
+         <input type="radio" id="threeCars" onclick="console.log('threeCars');" name="numCars" value="3">
+         <label for="threeCars">3</label>
+      </section>
+
+      <br/>
+      <button id="submit" onclick="calculateCost();">Get Detailed Estimate</button>
+      <br/>
+
+      <div id="resultsSection">
+         <section>
+            <h3>Single Story vs. Two Story</h3>
+            <img id="singleStoryResult" class="hidden" src="images/singleStory.png" alt="single story house"/>
+            <img id="twoStoryResult" class="hidden" src="images/twoStory.png" alt="two story house"/>
+         </section>
+         <section>
+            <h3>Color</h3>
+            <img id="blueResult" class="hidden" src="images/blue.png" alt="blue"/>
+            <img id="grayResult" class="hidden" src="images/gray.png" alt="gray"/>
+            <img id="greenResult" class="hidden" src="images/green.png" alt="green"/>
+            <img id="redResult" class="hidden" src="images/red.png" alt="red"/>
+            <img id="yellowResult" class="hidden" src="images/yellow.png" alt="yellow"/>
+            <img id="cyanResult" class="hidden" src="images/cyan.png" alt="cyan"/>
+            <img id="whiteResult" class="hidden" src="images/white.png" alt="white"/>
+            <img id="blackResult" class="hidden" src="images/black.png" alt="black"/>
+         </section>
+         <section>
+            <h3>Exterior Material</h3>
+            <img id="vinylResult" class="hidden" src="images/vinyl.png" alt="vinyl"/>
+            <img id="woodResult" class="hidden" src="images/wood.png" alt="wood"/>
+            <img id="stuccoResult" class="hidden" src="images/stucco.png" alt="stucco"/>
+            <img id="brickResult" class="hidden" src="images/brick.png" alt="brick"/>
+            <img id="stoneResult" class="hidden" src="images/stone.png" alt="stone"/>
+         </section>
+         <section>
+            <h3>Square Footage</h3>
+            <p id="areaResult" class="result"></p>
+         </section>
+         <section>
+            <h3>Garage (# of vehicles)</h3>
+            <p id="numCarsResult" class="result"></p>
+         </section>
+         <section>
+            <h3>Estimated Cost</h3>
+            <p id="costResult" class="result"></p>
+         </section>
+      </div>
+   </body>
+</html>

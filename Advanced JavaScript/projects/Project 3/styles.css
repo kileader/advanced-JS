@@ -1,0 +1,13 @@
+label, input, button {
+  margin: 0.5em;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: flex;
+  align-items: center;
+}
+img {
+  margin: 0.25em;
+}

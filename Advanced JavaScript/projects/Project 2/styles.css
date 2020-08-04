@@ -1,0 +1,34 @@
+button#getweather {
+  font-size: 1.25em;
+  color: white;
+  background-color: royalblue;
+  font-weight: bold;
+  border-radius: 0.5em;
+  padding: 0.25em;
+}
+
+div#resultsSection, img.hidden {
+  display: none;
+}
+
+p, input {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+div#temperature, div#wind {
+  display: flex;
+}
+
+div p, div img {
+  align-self: center;
+  margin-left: 1em;
+}
+
+input {
+  margin-left: 1em;
+}
+
+h1 {
+  margin-left: 0.67em
+}
